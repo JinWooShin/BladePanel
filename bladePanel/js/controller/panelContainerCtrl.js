@@ -56,7 +56,7 @@
         return {
             restrict: 'EA',
             controller: 'PanelContainerCtrl',
-            templateUrl: 'Views/template/panelContainer.html',
+            templateUrl: 'js/template/panelContainer.html',
             link: function (scope, element) {
                 element.children().css("height", (window.innerHeight - 16 - 10 /*scrollbar height*/) + "px");
             }

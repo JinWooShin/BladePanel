@@ -5,7 +5,7 @@ module.exports = function(grunt) {
             html2js: {
                 options: {
                     base:'app',
-                    module: 'myApp.templates',
+                    module: 'app.templates',
                     singleModule: true,
                     useStrict: true,
                     rename: function(moduleName) {
@@ -13,13 +13,13 @@ module.exports = function(grunt) {
                     }
                 },
                 main: {
-                    src: ['Views/templates/panels/panel-*.html'],
-                    dest: 'View/templates/populated_template_cashe.js'
+                    src: ['Views/template/panels/panel-*.html'],
+                    dest: 'Views/template/populated_template_cache.js'
                 }
             },
             watch: {
                 scripts: {
-                    files: ['Views/templates/panels/*.html'],
+                    files: ['Views/template/panels/*.html'],
                     tasks: ['html2js'],
                     options: {
                         spawn: false

@@ -51,7 +51,7 @@
         return {
             restrict: 'EA',
             controller: 'PanelCtrl',
-            templateUrl: 'Views/template/panel.html',
+            templateUrl: 'js/template/panel.html',
             scope: {
                 panel: "="
             },

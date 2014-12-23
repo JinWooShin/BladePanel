@@ -21,7 +21,7 @@
     .directive('toolbar', ['$window', 'ResizeService', function ($window, ResizeService) {
         return {
             restrict: 'EA',
-            templateUrl: 'Views/template/toolbar.html',
+            templateUrl: 'js/template/toolbar.html',
             controller: 'ToolbarCtrl',
             link: function () {
                 angular.element($window).bind("resize", function () {

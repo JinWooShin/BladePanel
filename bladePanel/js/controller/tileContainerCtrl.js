@@ -17,7 +17,7 @@
     .directive('tileContainer', ['$window', function () {
         return {
             restrict: 'EA',
-            templateUrl: 'Views/template/tileContainer.html',
+            templateUrl: 'js/template/tileContainer.html',
             controller: 'TileContainerCtrl',
             link: function (scope, element) {
                 element.children().css("height", (window.innerHeight - 16 - 10 /*scrollbar height*/) + "px");

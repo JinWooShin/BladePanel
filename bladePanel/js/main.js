@@ -16,21 +16,21 @@
         packages: [
             {
                 name: 'controller',
-                location: locationPath + 'js/controller'
+                location: locationPath + '/js/controller'
             }, {
                 name: 'service',
-                location: locationPath + 'js/service'
+                location: locationPath + '/js/service'
             }, {
-                name: 'Views',
-                location: locationPath + 'Views/template'
+                name: 'template',
+                location: locationPath + '/js/template'
             },{
                 name: 'js',
-                location: locationPath + 'js'
+                location: locationPath + '/js'
             }
         ]
     });
 
-    var app = angular.module('app', ['ui.bootstrap', 'ngAnimate', 'myApp.templates']);
+    var app = angular.module('app', ['ui.bootstrap', 'ngAnimate', 'app.templates']);
     require([
         'dojo/ready',
         'js/bootstrap'

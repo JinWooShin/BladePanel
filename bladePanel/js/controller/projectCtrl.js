@@ -11,7 +11,7 @@
             $scope.load = false;
             var deferred = $q.defer();
             var load = function () {
-                $http.get('testData/projectExample.json')
+                $http.get('/testData/projectExample.json')
                 .success(function (data) {
                     deferred.resolve(data);
                 }).error(function (err) {

@@ -904,16 +904,16 @@
     <Content Include="Scripts\require.js" />
     <Content Include="Scripts\spin.js" />
     <Content Include="Scripts\spin.min.js" />
-    <Content Include="Views\template\panel.html" />
-    <Content Include="Views\template\panelContainer.html" />
-    <Content Include="Views\template\panels\panel-control.html" />
-    <Content Include="Views\template\panels\panel-detail.html" />
-    <Content Include="Views\template\panels\panel-map.html" />
-    <Content Include="Views\template\panels\panel-project.html" />
-    <Content Include="Views\template\panels\panel-result.html" />
-    <Content Include="Views\template\panels\panel-search.html" />
-    <Content Include="Views\template\tileContainer.html" />
-    <Content Include="Views\template\toolbar.html" />
+    <Content Include="js\template\panel.html" />
+    <Content Include="js\template\panelContainer.html" />
+    <Content Include="js\template\panels\panel-control.html" />
+    <Content Include="js\template\panels\panel-detail.html" />
+    <Content Include="js\template\panels\panel-map.html" />
+    <Content Include="js\template\panels\panel-project.html" />
+    <Content Include="js\template\panels\panel-result.html" />
+    <Content Include="js\template\panels\panel-search.html" />
+    <Content Include="js\template\tileContainer.html" />
+    <Content Include="js\template\toolbar.html" />
     <Content Include="Web.config" />
     <Content Include="Scripts\jquery-1.9.0.min.map" />
   </ItemGroup>
@@ -940,6 +940,7 @@
     <Content Include="Scripts\angular-animate.min.js.map" />
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Scripts\angular-spinner.min.js.map" />
+    <Content Include="testData\projectExample.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

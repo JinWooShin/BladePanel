@@ -2,7 +2,7 @@
     "use strict";
 
     angular.module('app')
-    .service("QueryService", ['EsriService', '$log', '$q', function (EsriService, $log, $q) {
+    .service("QueryService", ['EsriService', '$log', '$q', function (EsriService, $log, $q) {       
         this.getQuery = function () {
             return EsriService.getQuery();
         };
@@ -15,7 +15,6 @@
                 deferred.reject(err);
             });
             return deferred.promise;
-        }
-
+        };
     }]);
 }).call(this);

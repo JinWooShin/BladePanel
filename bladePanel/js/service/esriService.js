@@ -9,8 +9,11 @@
 
         'esri/tasks/query',
         'esri/tasks/QueryTask',
+        'esri/tasks/GeometryService',
 
         'esri/geometry/Circle',
+        'esri/geometry/normalizeUtils',
+        'esri/geometry/Polygon',
 
         'esri/symbols/SimpleMarkerSymbol',
         'esri/symbols/SimpleLineSymbol',
@@ -24,8 +27,8 @@
 
     ], function (Map,
             ArcGISDynamicMapServiceLayer, FeatureLayer, GraphicsLayer,
-            Query, QueryTask,
-            Circle,
+            Query, QueryTask, GeometryService,
+            Circle, normalizeUtils, Polygon,
             SimpleMarkerSymbol, SimpleLineSymbol, SimpleFillSymbol,
             esriConfig,
             Color,
@@ -69,12 +72,21 @@
                     getQueryTask: function (url, options) {
                         return new QueryTask(url, options);
                     },
+                    getGeometryService: function (url) {
+                        return new GeometryService(url);
+                    },
+                    getNormalizeUtils: function () {
+                        return normalizeUtils;
+                    },                    
                     getGeometryCircle: function (param1, param2) {
                         if (param1.center) {
                             return new Circle(param1);
                         } else {
                             return new Circle(param1, param2);
                         }
+                    },
+                    getPolygon: function (option) {
+                        return new Polygon(option);
                     },
                     getSymbolsSimpleSymbol: function (type, param1, param2, param3, param4) {
                         var symbol = null;

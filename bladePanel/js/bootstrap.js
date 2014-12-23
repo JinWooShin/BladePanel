@@ -7,6 +7,8 @@
     define([
         //Load services/providers first
         'service/esriService',
+        'service/geometryService',
+        'service/queryService',
         'service/layerService',
         'service/resizeService',
         'service/panelProvider',
@@ -20,7 +22,7 @@
         'controller/tileContainerCtrl',
         'controller/panelContainerCtrl',
         'controller/panelCtrl'
-    ], function (EsriService, LayerService, ResizeService, PanelProvider, MapService,
+    ], function (EsriService, QueryService, GeometryService, LayerService, ResizeService, PanelProvider, MapService,
                 ProjectCtrl, indexCtrl, MapCtrl, ToolbarCtrl, TileContainer, PanelContainerCtrl, PanelCtrl) {
         function init(App) {
 

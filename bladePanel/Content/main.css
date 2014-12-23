@@ -38,9 +38,6 @@
 }
 /*panel head top*/
 .panelHeadControl {
-    padding: 2px 5px 2px 0px;
-    height: 25px;
-    background-color:#3c763d;
 }
 /*button for panel head*/
 .panelHeadButton {
@@ -77,7 +74,7 @@
 .layoutPanel.horizontal.minimize  > .panelHead {
     transform: rotate(90deg);
 }
-.layoutPanel.horizontal.minimize  > .panelHead > .panelHeadControl {
+.layoutPanel.horizontal.minimize  > .panelHead > .panelHeadTitle > .panelHeadControl {
     display: none;
 }
 .layoutPanel.horizontal.minimize  > .panelHead > .panelHeadTitle {

@@ -2,7 +2,7 @@
     "use strict";
     
     var pathRx = new RegExp(/\/[^\/]+$/);
-    var locationPath = location.pathname.replace(pathRx, "");
+    var locationPath = location.href.replace(pathRx, "");
 
     define("angular", function() {
         if (angular) {

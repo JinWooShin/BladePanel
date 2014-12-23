@@ -13,13 +13,13 @@ module.exports = function(grunt) {
                     }
                 },
                 main: {
-                    src: ['Views/template/panels/panel-*.html'],
-                    dest: 'Views/template/populated_template_cache.js'
+                    src: ['js/template/panels/panel-*.html'],
+                    dest: 'js/template/populated_template_cache.js'
                 }
             },
             watch: {
                 scripts: {
-                    files: ['Views/template/panels/*.html'],
+                    files: ['js/template/panels/*.html'],
                     tasks: ['html2js'],
                     options: {
                         spawn: false

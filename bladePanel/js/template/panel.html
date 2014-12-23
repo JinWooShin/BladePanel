@@ -1,15 +1,17 @@
 ﻿<div class="panel panel-default layoutPanel horizontal" ng-class="{'minimize':panel.collapse===true}">
     <div class="panel-heading panelHead">
-        <div class="panelHeadControl">
-            <div class="btn-group pull-right">
-                <a href="#"><i ng-class="{'fa fa-angle-double-right':panel.collapse===true, 'fa fa-angle-double-left':panel.collapse===false}" class="panelHeadButton" data-toggle="collapse" data-target=".panel-body.layoutPanel" ng-click="toggleCollapse()"></i></a>
-                <a href="#"><i class="fa fa-save panelHeadButton" ng-click="savePanel()"></i></a>
-                <a href="#"><i ng-class="{ 'fa fa-lock':panel.lock, 'fa fa-unlock':panel.lock===false}" class="panelHeadButton" ng-click="toggleLock()"></i></a>
-                <a href="#"><i class="fa fa-times panelHeadButton" ng-class="{inactive: panel.lock}" ng-click="closePanel()"></i></a>
-            </div>
-        </div>
-        <div class="panel-title panelHeadTitle" ng-click="toggleCollapse(true)">
-            {{panel.content.title}}
+        
+        <div class="panel-title panelHeadTitle" ng-click="toggleCollapse(false, $event)">
+            <span>{{panel.content.title}}</span>
+
+            <span class="panelHeadControl">
+                <div class="btn-group pull-right">
+                    <a href="#"><i ng-class="{'fa fa-angle-double-right':panel.collapse===true, 'fa fa-angle-double-left':panel.collapse===false}" class="panelHeadButton" data-toggle="collapse" data-target=".panel-body.layoutPanel" ng-click="toggleCollapse(true, $event)"></i></a>
+                    <a href="#"><i class="fa fa-save panelHeadButton" ng-click="savePanel()"></i></a>
+                    <a href="#"><i ng-class="{ 'fa fa-lock':panel.lock, 'fa fa-unlock':panel.lock===false}" class="panelHeadButton" ng-click="toggleLock()"></i></a>
+                    <a href="#"><i class="fa fa-times panelHeadButton" ng-class="{inactive: panel.lock}" ng-click="closePanel()"></i></a>
+                </div>
+            </span>
         </div>
     </div>
     <div class="panel-body layoutPanel" ng-class="{'collapse':panel.collapse===true}">

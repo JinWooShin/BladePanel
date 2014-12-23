@@ -104,8 +104,11 @@
     <Content Include="js\controller\toolbarCtrl.js" />
     <Content Include="js\main.js" />
     <Content Include="js\service\esriService.js" />
+    <Content Include="js\service\geometryService.js" />
+    <Content Include="js\service\gridService.js" />
     <Content Include="js\service\layerService.js" />
     <Content Include="js\service\mapService.js" />
+    <Content Include="js\service\objectService.js" />
     <Content Include="js\service\panelProvider.js" />
     <Content Include="js\service\queryService.js" />
     <Content Include="js\service\resizeService.js" />

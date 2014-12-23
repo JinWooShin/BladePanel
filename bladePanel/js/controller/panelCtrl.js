@@ -13,11 +13,12 @@
             $scope.toggleLock = function () {
                 $scope.panel.lock = !$scope.panel.lock;
             };
-            $scope.toggleCollapse = function (isCollapsed) {
-                if (isCollapsed) {
-                    $scope.panel.collapse = false;
+            $scope.toggleCollapse = function (isCollapsing, event) {
+                event.stopPropagation();
+                if (!isCollapsing) {
+                    $scope.panel.collapse = false;                    
                 } else {
-                    $scope.panel.collapse = !$scope.panel.collapse;
+                    $scope.panel.collapse = !$scope.panel.collapse;                    
                 }
                 if ($scope.panel.collapse) {
                     $element[0].querySelector('.panelHeadTitle').style.width = (window.innerHeight - 28) + "px";

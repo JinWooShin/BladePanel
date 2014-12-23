@@ -1,0 +1,134 @@
+﻿/*horizontal panel for common usage*/
+.horizontal{
+    position: relative;
+    margin: 2px 1px 0px 1px;
+    padding: 0;
+    /*width: 200px;*/
+    height: 100%;
+    float: left;
+    overflow: hidden;}
+.panel-body {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+/*overall layout container*/
+.layoutContainer {
+    margin: 0px;
+    padding: 0px;
+}
+
+/******************/
+/***    Panel   ***/
+/******************/
+.panel {
+    border-radius: 0px;
+}
+
+.panelContainer {
+    overflow: hidden;
+    padding:0px;
+    border:0px;
+    width: auto !important;
+}
+.panel-body.layoutPanel {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+/*panel head top*/
+.panelHeadControl {
+    padding: 2px 5px 2px 0px;
+    height: 25px;
+    background-color:#3c763d;
+}
+/*button for panel head*/
+.panelHeadButton {
+    padding: 0px 5px 0px 5px;
+    color:#5cb85c;
+}
+.panelHeadButton:hover {
+    color:#ebebeb;
+}
+.panelHeadButton.inactive {
+    color:#328c5c !important;
+    cursor:default !important;
+}
+/*panel head with title text*/
+.panelHeadTitle {
+    height: 30px;
+    background-color:#449d44 ;
+    color: #ffffff;
+    font-size: 18px;
+    padding:2px 10px 2px 10px;
+}
+
+.layoutPanel.horizontal {
+    min-width: 200px;
+}
+.layoutPanel.horizontal > .panel-heading {
+    padding:0px;
+}
+.layoutPanel.horizontal.minimize {
+    width: 30px;
+    min-width: 30px;
+}
+
+.layoutPanel.horizontal.minimize  > .panelHead {
+    transform: rotate(90deg);
+}
+.layoutPanel.horizontal.minimize  > .panelHead > .panelHeadControl {
+    display: none;
+}
+.layoutPanel.horizontal.minimize  > .panelHead > .panelHeadTitle {
+    height:30px;
+    color: #bebebe;
+    background-color: #3c645a;
+}
+
+.panelMap.control {
+    width: 200px;
+    float: left;
+}
+.panelMap.map {
+    width:400px;
+}
+/*.layoutPanel.horizontal.minimize  > .panel-body.layoutPanel {*/
+
+/*}*/
+/***********************/
+/***  TileContainer  ***/
+/***********************/
+.tileContainer.horizontal {
+    width: 500px;
+    padding: 5px;
+}
+.panel-body.tile {
+    padding:3px;
+}
+.panel-heading.tile {
+    padding: 0px;
+}
+#map {
+    height: 100%            ;
+    width: 400px;
+}
+.row.tile {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.col-xs-6.tile{
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+/***************/
+/**  Toolbar  **/
+/***************/
+.toolbar.horizontal {
+    width:60px;
+    overflow: hidden;
+}
+.panel-body.toolbar {
+    padding: 3px 3px 10px 3px;
+}

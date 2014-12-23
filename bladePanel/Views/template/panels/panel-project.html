@@ -1,0 +1,10 @@
+﻿<div class="panelContent" ng-controller="ProjectCtrl">
+    <div ng-if="load===false">
+        <progressbar class="progress-stripped active" type="info" max="100" value="100"><i>Loading...</i></progressbar>
+    </div>
+    <div class="list-group" ng-if="load===true">
+        <a ng-repeat="project in projects" href="#" class="list-group-item" tooltip="{{project.date}}" ng-click="setProject(project)">
+            {{project.title}}
+        </a>
+    </div>
+</div>

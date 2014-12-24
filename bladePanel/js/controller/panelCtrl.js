@@ -42,7 +42,7 @@
             $scope.getStyle = function () {
                 var panels = PanelProvider.getPanels();
                 if (panels.length > 0) {
-                    $element.children()[0].style.height = (window.innerHeight - 28 - 10 /*scrollbar height*/) + "px";
+                    //$element.children()[0].style.height = (window.innerHeight - 28 - 10 /*scrollbar height*/) + "px";
                 }
             };
         }
@@ -57,8 +57,13 @@
                 panel: "="
             },
             link: function (scope, element) {
-                element.children().css("height", (window.innerHeight - 18 - 10 /*scrollbar height*/) + "px");
-
+                var pan = $(element.children()[0]).clone(false);
+                pan.appendTo(document.body);
+                var width = pan.css("width");   //we can get intended(rendered) width value only after add element to document.
+                pan.remove();
+                element.children().css("height", (window.innerHeight - 18 - 10 /*scrollbar height*/) + "px")
+                                .css("width", width)
+                                .css("maxWidth", width);
             }
         };
     }]);

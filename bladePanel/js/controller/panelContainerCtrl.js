@@ -23,14 +23,14 @@
                 if (panels.length > 0) {
                     angular.forEach(panels, function (panel) {
                         var style = window.getComputedStyle(panel, null);
-                        total += parseInt(style.getPropertyValue("width")) +
+                        total += parseInt(style.getPropertyValue("max-width")) +
                                 parseInt(style.getPropertyValue("margin-left")) +
                                 parseInt(style.getPropertyValue("margin-right"));
                     });
                     var containerMargin = parseInt(container.getPropertyValue("margin-left")) +
                                             parseInt(container.getPropertyValue("margin-right"));
-                    $element.children()[0].style.width = (total + containerMargin) + "px";
-                    //$scope.resizeLayout();
+                    $element.children()[0].style.minWidth = (total + containerMargin) + "px";
+                    $scope.resizeLayout();
                 }
             };
             $scope.resizeLayout = function () {
@@ -41,7 +41,7 @@
                 if (toolbar) {
                     total += parseInt(toolbar.getPropertyValue("width")) + parseInt(toolbar.getPropertyValue("margin-right")) + parseInt(toolbar.getPropertyValue("margin-left"));
                 }
-                if (tileContainer) {
+                if (tileContainer && PanelProvider.getPanels().length===0) {
                     total += parseInt(tileContainer.getPropertyValue("width")) + parseInt(tileContainer.getPropertyValue("margin-right")) + parseInt(tileContainer.getPropertyValue("margin-left"));
                 }
                 if (panelContainer) {
@@ -59,6 +59,7 @@
             templateUrl: 'js/template/panelContainer.html',
             link: function (scope, element) {
                 element.children().css("height", (window.innerHeight - 16 - 10 /*scrollbar height*/) + "px");
+                
             }
         };
     });

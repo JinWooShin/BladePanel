@@ -3,20 +3,16 @@
     position: relative;
     margin: 2px 1px 0px 1px;
     padding: 0;
-    /*width: 200px;*/
     height: 100%;
     float: left;
-    overflow: hidden;}
-.panel-body {
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow: hidden;
 }
-
 
 /*overall layout container*/
 .layoutContainer {
     margin: 0px;
     padding: 0px;
+    /*width: auto !important;*/
 }
 
 /******************/
@@ -25,7 +21,10 @@
 .panel {
     border-radius: 0px;
 }
-
+.panel-body {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 .panelContainer {
     overflow: hidden;
     padding:0px;
@@ -33,8 +32,9 @@
     width: auto !important;
 }
 .panel-body.layoutPanel {
-    overflow-y: auto;
-    overflow-x: hidden;
+    /*overflow-y: auto;
+    overflow-x: hidden;*/
+    overflow: hidden;
 }
 /*panel head top*/
 .panelHeadControl {
@@ -67,20 +67,20 @@
     padding:0px;
 }
 .layoutPanel.horizontal.minimize {
-    width: 30px;
+    width: 30px !important;
     min-width: 30px;
 }
 
 .layoutPanel.horizontal.minimize  > .panelHead {
     transform: rotate(90deg);
 }
-.layoutPanel.horizontal.minimize  > .panelHead > .panelHeadTitle > .panelHeadControl {
-    display: none;
-}
 .layoutPanel.horizontal.minimize  > .panelHead > .panelHeadTitle {
     height:30px;
     color: #bebebe;
     background-color: #3c645a;
+}
+.layoutPanel.horizontal.minimize  > .panelHead > .panelHeadTitle > .panelHeadControl {
+    display: none;
 }
 
 .panelMap.control {
@@ -122,8 +122,13 @@
 /***************/
 /**  Toolbar  **/
 /***************/
+.pull-bottom {
+    position: absolute;
+    bottom: 10px;
+}
 .toolbar.horizontal {
     width:60px;
+    height: 100%;
     overflow: hidden;
 }
 .panel-body.toolbar {

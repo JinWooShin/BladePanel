@@ -30,7 +30,7 @@
                     var containerMargin = parseInt(container.getPropertyValue("margin-left")) +
                                             parseInt(container.getPropertyValue("margin-right"));
                     $element.children()[0].style.width = (total + containerMargin) + "px";
-                    $scope.resizeLayout();
+                    //$scope.resizeLayout();
                 }
             };
             $scope.resizeLayout = function () {

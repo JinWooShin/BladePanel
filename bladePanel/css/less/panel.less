@@ -1,0 +1,72 @@
+﻿.panel {
+    border-radius: 0px;
+}
+.panel-body {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.panelContainer {
+    overflow: hidden;
+    padding:0px;
+    border:0px;
+    width: auto !important;
+}
+.panel-body.layoutPanel {
+    /*overflow-y: auto;
+    overflow-x: hidden;*/
+    overflow: hidden;
+}
+/*panel head top*/
+.panelHeadControl {
+}
+/*button for panel head*/
+.panelHeadButton {
+    padding: 0px 5px 0px 5px;
+    color:#5cb85c;
+}
+.panelHeadButton:hover {
+    color:#ebebeb;
+}
+.panelHeadButton.inactive {
+    color:#328c5c !important;
+    cursor:default !important;
+}
+/*panel head with title text*/
+.panelHeadTitle {
+    height: 30px;
+    background-color:#449d44 ;
+    color: #ffffff;
+    font-size: 18px;
+    padding:2px 10px 2px 10px;
+}
+
+.layoutPanel.horizontal {
+    min-width: 200px;
+}
+.layoutPanel.horizontal > .panel-heading {
+    padding:0px;
+}
+.layoutPanel.horizontal.minimize {
+    width: 30px !important;
+    min-width: 30px;
+}
+
+.layoutPanel.horizontal.minimize  > .panelHead {
+    transform: rotate(90deg);
+}
+.layoutPanel.horizontal.minimize  > .panelHead > .panelHeadTitle {
+    height:30px;
+    color: #bebebe;
+    background-color: #3c645a;
+}
+.layoutPanel.horizontal.minimize  > .panelHead > .panelHeadTitle > .panelHeadControl {
+    display: none;
+}
+
+.panelMap.control {
+    width: 200px;
+    float: left;
+}
+.panelMap.map {
+    width:400px;
+}

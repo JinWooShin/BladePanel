@@ -23,7 +23,7 @@
                 if (panels.length > 0) {
                     angular.forEach(panels, function (panel) {
                         var style = window.getComputedStyle(panel, null);
-                        total += parseInt(style.getPropertyValue("max-width")) +
+                        total += parseInt(style.getPropertyValue("width")) +
                                 parseInt(style.getPropertyValue("margin-left")) +
                                 parseInt(style.getPropertyValue("margin-right"));
                     });

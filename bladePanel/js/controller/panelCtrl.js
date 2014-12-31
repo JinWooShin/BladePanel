@@ -48,7 +48,7 @@
         }
     ])
 
-    .directive("layoutPanel", [function () {
+    .directive("layoutPanel", ['$compile', '$templateCache', function ($compile, $templateCache) {
         return {
             restrict: 'EA',
             controller: 'PanelCtrl',
@@ -57,13 +57,14 @@
                 panel: "="
             },
             link: function (scope, element) {
-                var pan = $(element.children()[0]).clone(false);
-                pan.appendTo(document.body);
+                //var pan = $(element.children()[0]).clone(false);
+                var pan = $compile($templateCache.get(scope.panel.templateUrl))(scope);
+                $(pan).appendTo(document.body);
                 var width = pan.css("width");   //we can get intended(rendered) width value only after add element to document.
                 pan.remove();
                 element.children().css("height", (window.innerHeight - 18 - 10 /*scrollbar height*/) + "px")
-                                .css("width", width)
-                                .css("maxWidth", width);
+                                .css("width", width);
+                                //.css("maxWidth", width);
             }
         };
     }]);

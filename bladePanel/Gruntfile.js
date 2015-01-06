@@ -19,23 +19,10 @@ module.exports = function(grunt) {
             },
             watch: {
                 scripts: {
-                    files: ['js/template/panels/*.html', 'css/less/*.less'],
-                    tasks: ['html2js', 'less'],
+                    files: ['js/template/panels/*.html'],
+                    tasks: ['html2js'],
                     options: {
                         spawn: false
-                    }
-                }
-            },
-            less: {
-                compile: {
-                    options: {
-                        compress: false,
-                        yuicompress: false,
-                        optimization: 2,
-                        path: ['css/less']
-                    },
-                    files: {
-                        "css/style.css": "css/less/style.less"
                     }
                 }
             }
@@ -45,5 +32,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-html2js');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.registerTask('default', ['html2js', 'less', 'watch']);
+    grunt.registerTask('default', ['html2js', 'watch']);
 }
